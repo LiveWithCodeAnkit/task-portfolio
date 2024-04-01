@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+.card {
+	width: 350px;
+	height: 350px;
+	margin: 100px auto 0;
+	transform-style: preserve-3d;
+	transition: transform 0.8s ease-in-out;
+	perspective: 1000px;
+	border-radius: 15px;
+}
+
+.front,
+.back {
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+	position: absolute;
+	backface-visibility: hidden;
+	overflow: hidden;
+}
+
+.front {
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	color: #fff;
+}
+
+.frontDetials {
+	z-index: 100;
+	text-align: center;
+	background-color: rgba(79, 79, 79, 0.3);
+}
+
+.front h2 {
+	font-weight: 500;
+	font-size: 30px;
+	color: #fff;
+}
+
+.front button {
+	width: 120px;
+	border: 1px solid #fff;
+	background: transparent;
+	border-radius: 50px;
+	padding: 8px 20px;
+	cursor: pointer;
+	margin: 15px 0;
+	color: #fff;
+}
+
+.back {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: #333;
+	padding: 20px 40px;
+	transform: rotateY(180deg);
+	background-color: rgba(79, 79, 79, 0.3);
+}
+
+.back img {
+	width: 100px;
+	height: 100px;
+	/* margin-bottom: 50px; */
+}
+
+.back h1 {
+	font-size: 50px;
+	line-height: 55px;
+	margin-bottom: 20px;
+}
+
+.back p {
+	font-size: 14px;
+}
+
+.backlink {
+	background: #7800ad;
+	color: #fff;
+	border: 0px;
+	outline: 0;
+	padding: 8px 0;
+	width: 70%;
+	text-align: center;
+	border-radius: 30px;
+	font-size: 14px;
+	margin-right: 15px;
+	box-shadow: 0 8px 10px rgba(120, 0, 173, 0.3);
+}
+
+.card:hover {
+	transform: rotateY(180deg);
+}
